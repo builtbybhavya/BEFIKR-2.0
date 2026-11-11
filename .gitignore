@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+backend/data/
+backend/tests/.test_data/
+.pytest_cache/
+.coverage
+node_modules/
+dist/

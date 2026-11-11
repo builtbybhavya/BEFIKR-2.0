@@ -1,0 +1,1 @@
+"""BEFIKR application package."""
