@@ -42,8 +42,8 @@
 .tile-arrow{position:absolute;right:11px;bottom:14px;width:31px;height:31px;border:1px solid #ffffffa3;border-radius:50%;display:grid;place-items:center;font-size:27px;line-height:1;color:inherit;background:#2d153033}
 .tile-spot .tile-art{top:50%;left:16px;transform:translateY(-50%);color:#fff}
 .tile-spot .tile-copy{left:82px;right:44px;top:50%;bottom:auto;transform:translateY(-50%);gap:4px}
-.tile-spot .tile-copy strong{font-size:17px;color:#391e22}
-.tile-spot .tile-copy>span{color:#3e282b;font-size:11px}
+.tile-spot .tile-copy strong{font-size:17px;color:#fff;text-shadow:0 1px 3px #552126aa}
+.tile-spot .tile-copy>span{color:#fff;font-size:11px;text-shadow:0 1px 3px #552126aa}
 .tile-spot .tile-arrow{top:50%;bottom:auto;transform:translateY(-50%);border-color:#7b383b;color:#6e2c34;background:#ffffff31}
 .home-footnote{display:flex;align-items:center;gap:8px;color:#73696a;font-size:10px;line-height:1.3;padding:12px 4px 6px}
 .footnote-mark{width:16px;height:16px;border:1px solid #c9bfae;border-radius:50%;display:grid;place-items:center;flex:none;font-size:10px}
@@ -385,3 +385,4 @@
 .spot-welcome p,.baat-welcome p,.raahi-welcome p{font-family:var(--font);font-size:13px;font-weight:400;line-height:1.35}
 .spot-eyebrow,.baat-welcome .baat-eyebrow,.raahi-welcome .raahi-eyebrow{font-family:var(--font);font-size:9px;font-weight:800;line-height:1.2;letter-spacing:.13em}
 @media(max-width:420px){.spot-welcome h1,.baat-welcome h1,.raahi-welcome h1{font-size:24px}}
+.home-dashboard .home-tiles .tile-spot .tile-copy strong,.home-dashboard .home-tiles .tile-spot .tile-copy>span{color:#fff!important;text-shadow:0 1px 3px #552126aa}
