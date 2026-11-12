@@ -1,5 +1,5 @@
-const CACHE = "befikr-shell-v5";
-const SHELL = ["/", "/styles.css?v=3", "/app.js", "/manifest.webmanifest", "/assets/befikr-home-logo.png", "/assets/befikr-favicon.png?v=2", "/assets/befikr-icon-180.png?v=2", "/assets/befikr-icon-192.png?v=2", "/assets/befikr-icon-512.png?v=2", "/assets/befikr-icon-maskable-512.png?v=2"];
+const CACHE = "befikr-shell-v7";
+const SHELL = ["/", "/styles.css?v=5", "/app.js", "/manifest.webmanifest", "/assets/befikr-home-logo.png", "/assets/befikr-favicon.png?v=2", "/assets/befikr-icon-180.png?v=2", "/assets/befikr-icon-192.png?v=2", "/assets/befikr-icon-512.png?v=2", "/assets/befikr-icon-maskable-512.png?v=2"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL))));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
 self.addEventListener("fetch", event => {
