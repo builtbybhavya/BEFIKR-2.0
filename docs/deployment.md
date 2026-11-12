@@ -17,14 +17,6 @@ docker run --rm -p 8000:8000 -v befikr-data:/data `
   -e BEFIKR_ADMIN_PASSWORD="use-a-unique-long-password" befikr-dev
 ```
 
-## Render staging preview
-
-The root `render.yaml` defines a single Render web service for a staging preview. After connecting this GitHub repository to Render and creating a Blueprint from the repository, Render builds the Docker image from `main` and deploys each new commit to that branch. The service uses `/api/health` for its health check, a generated token-signing secret, and a 1 GB persistent disk mounted at `/data` for SQLite.
-
-The configuration uses Render's `0.5c-512mb` web-service plan and a 1 GB disk. Render currently lists those at $7/month and $0.25/GB-month respectively (about $7.25/month before any applicable taxes or usage charges). A persistent disk is supported only on a paid service, is limited to one instance, and prevents zero-downtime deploys. See [Render compute pricing](https://render.com/pricing), [persistent disks](https://render.com/docs/disks), and [automatic deploys](https://render.com/docs/deploys).
-
-Treat this as a public demo only. Do not enter real personal, location, or safety-report data. SOS does not dispatch emergency services, routes do not have live safety scores, and this service has no operational monitoring or staffed response. The configured map provider remains `demo`. Use a production release only after the production deployment gate below is complete.
-
 ## Production deployment gate
 
 The repository has no hosting account, provider credentials, production database adapter, mapping key, notification credentials, or operational approval. Do not claim an external integration or deploy an emergency-facing service based on this demo. To prepare a real release:
