@@ -75,6 +75,60 @@
 .profile-admin-link{margin-top:16px}
 @media(min-width:761px){.bottom-nav{width:min(850px,92vw);padding-inline:18px}.bottom-nav button{font-size:12px}.bottom-nav .nav-label{font-size:12px;white-space:nowrap}.bottom-nav .nav-icon{width:22px;height:22px}.bottom-nav .nav-icon svg{width:21px;height:21px}}
 
+/* Profile section inspired by the supplied burgundy and antique-gold reference. */
+.profile-shell{min-height:100vh;background:radial-gradient(ellipse at 50% 40%,#492431 0,#24131a 54%,#160c11 100%);color:#ead9b2}
+.profile-shell .topbar{display:none}
+.profile-shell .layout{width:min(100%,430px);max-width:430px;margin:0 auto;padding:10px 14px 116px}
+.profile-page{width:min(100%,390px);margin:0 auto;color:#ead9b2}
+.profile-header{height:42px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;margin:0 0 6px}
+.profile-header h1{margin:0;color:#ead9b2;font:600 23px/1 var(--display);text-align:center}
+.profile-back,.profile-gear{min-height:38px;display:inline-flex;align-items:center;gap:5px;border:0;background:transparent;color:#c6a778;font-size:14px}
+.profile-back{justify-self:start;padding:0 5px 0 0}
+.profile-back>span{font-size:28px;line-height:.7}
+.profile-gear{width:38px;justify-content:center;justify-self:end;padding:0}
+.profile-gear svg{width:22px;height:22px}
+.profile-hero{position:relative;margin:63px 11px 17px;padding:79px 16px 17px;border:1px solid #d4c6b045;border-radius:25px;background:linear-gradient(145deg,#ffffff21,#ffffff0b);box-shadow:0 12px 30px #08040855,inset 0 1px #ffffff20;text-align:center;backdrop-filter:blur(12px)}
+.profile-avatar{position:absolute;top:-52px;left:50%;width:104px;height:104px;display:grid;place-items:center;transform:translateX(-50%);border:3px solid #e6d6a9;border-radius:50%;background:#311923;padding:4px;box-shadow:0 0 0 3px #d6bd8266,0 7px 20px #08040870}
+.profile-avatar svg{width:100%;height:100%;display:block;border-radius:50%}
+.profile-hero h2{margin:0;color:#e9d6a9;font:600 27px/1.15 var(--display)}
+.profile-hero>p{margin:4px 0 11px;color:#d9c6a4;font-size:14px;overflow-wrap:anywhere}
+.profile-edit{width:min(100%,185px);margin:0 auto}
+.profile-edit>summary{min-height:39px;display:grid;place-items:center;border:1px solid #b5867b88;border-radius:99px;background:linear-gradient(115deg,#762e43,#511d30);color:#ead7a7;font-size:14px;font-weight:700;cursor:pointer;list-style:none;box-shadow:0 4px 12px #180b1155}
+.profile-edit>summary::-webkit-details-marker,.profile-menu-item>summary::-webkit-details-marker{display:none}
+.profile-edit[open]>summary{border-radius:18px 18px 0 0}
+.profile-edit-form{display:grid;gap:7px;padding:12px;border:1px solid #b5867b66;border-top:0;border-radius:0 0 17px 17px;background:#21131bcf;text-align:left}
+.profile-edit-form label{color:#d2bd8e;font-size:11px;font-weight:700}
+.profile-edit-form input{width:100%;min-height:38px;padding:8px 10px;border:1px solid #cfb98b4d;border-radius:10px;background:#ffffff12;color:#fff8e9}
+.profile-edit-form button,.profile-detail-actions button{min-height:38px;padding:8px 12px;border:1px solid #bd9c5666;border-radius:10px;background:#725033;color:#fff1c8;font-weight:700}
+.profile-menu{overflow:hidden;margin:0 0 14px;padding:4px 15px;border:1px solid #b9a48639;border-radius:22px;background:linear-gradient(145deg,#ffffff16,#ffffff0a);box-shadow:0 10px 26px #09060a43;backdrop-filter:blur(12px)}
+.profile-row{width:100%;min-height:51px;display:flex;align-items:center;gap:13px;padding:8px 0;border:0;border-bottom:1px solid #d0be9b2b;background:transparent;color:#dfc69a;text-align:left;text-decoration:none;cursor:pointer;list-style:none}
+.profile-menu-item:last-child .profile-row{border-bottom:0}
+.profile-row-icon{width:25px;height:25px;flex:none;display:grid;place-items:center;color:#d5be8d}
+.profile-row-icon svg{width:21px;height:21px;display:block;stroke:currentColor}
+.profile-row-label{min-width:0;flex:1;font-size:14px;font-weight:600}
+.profile-chevron{color:#c4a77a;font:400 25px/1 var(--font);transition:transform .18s}
+.profile-menu-item[open] .profile-row{border-bottom-color:#d0be9b2b}
+.profile-menu-item[open] .profile-chevron{transform:rotate(90deg)}
+.profile-detail-panel{padding:11px 0 13px;color:#d4c4a4;font-size:11px;line-height:1.55}
+.profile-detail-panel>p{margin:0 0 9px;color:#d4c4a4}
+.profile-setting-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0 0;border-top:1px solid #d0be9b2b;color:#bfa985}
+.profile-setting-row strong{color:#e4d3ad;font-size:10px}
+.profile-status-list{display:grid;gap:0;margin:9px 0}
+.profile-status-row{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:8px 0;border-top:1px solid #d0be9b24}
+.profile-status-row>span{min-width:0;display:grid;gap:2px}
+.profile-status-row strong{color:#ead8b5;font-size:11px}
+.profile-status-row small{color:#c5b394;font-size:9px;line-height:1.4}
+.profile-status-row>b{flex:none;padding:3px 6px;border:1px solid #c7aa6a46;border-radius:99px;color:#dfc68f;font-size:8px}
+.profile-detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.profile-detail-actions button{min-height:34px;font-size:10px}
+.profile-detail-actions .profile-delete{border-color:#bb657155;background:#5b2431;color:#f0c3be}
+.profile-small-note{color:#b9a98f!important;font-size:10px}
+.profile-logout{width:100%;min-height:49px;display:flex;align-items:center;justify-content:center;gap:10px;border:1px solid #c7948861;border-radius:99px;background:linear-gradient(110deg,#702b40,#511d30);color:#ead7a7;font-size:14px;font-weight:700;box-shadow:0 6px 18px #0b050a58}
+.profile-logout svg{width:19px;height:19px}
+.profile-shell .profile-admin-link{border:1px solid #b9a48639;background:#ffffff12;color:#ead9b2;box-shadow:none}
+.profile-shell .profile-admin-link h3,.profile-shell .profile-admin-link p{color:#ead9b2}
+@media(max-width:390px){.profile-shell .layout{padding-inline:10px}.profile-hero{margin-inline:7px}.profile-menu{padding-inline:12px}.profile-row{gap:10px}.profile-row-label{font-size:13px}}
+
 /* Baat Banao call flow, styled around the warm gold mobile reference. */
 .baat-page{max-width:620px;margin:0 auto;padding-bottom:12px;color:#40280f}
 .baat-heading{display:flex;align-items:center;gap:14px;margin:2px 0 17px;padding:6px 2px}
