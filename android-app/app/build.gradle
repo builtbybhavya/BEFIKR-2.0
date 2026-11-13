@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+def befikrStartUrl = providers.gradleProperty('befikrStartUrl')
+        .getOrElse('http://10.0.2.2:8000/')
+
+android {
+    namespace 'com.befikr.app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.befikr.app'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+        buildConfigField 'String', 'BEFIKR_START_URL', '"' + befikrStartUrl.replace('\\', '\\\\').replace('"', '\\"') + '"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+tasks.register('validateReleaseServerUrl') {
+    doLast {
+        if (!befikrStartUrl.startsWith('https://') || befikrStartUrl.contains('YOUR-BEFIKR-HTTPS-HOST')) {
+            throw new GradleException('Set -PbefikrStartUrl=https://your-deployed-befikr-host/ before building a release APK.')
+        }
+    }
+}
+
+tasks.configureEach { task ->
+    if (task.name == 'preReleaseBuild') task.dependsOn('validateReleaseServerUrl')
+}
